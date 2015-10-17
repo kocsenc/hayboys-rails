@@ -1,0 +1,59 @@
+<template name="MasterLayout">
+
+  <div class="ui secondary pointing menu">
+  <a class="item">
+    Hay Boys 2K quotesList
+  </a>
+  <a class="item">
+    Messages
+  </a>
+  <a class="item active">
+    Friends
+  </a>
+  <div class="right menu">
+    <a class="ui item">
+      Logout
+    </a>
+  </div>
+  </div>
+
+
+
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><i class="fa fa-medium"></i> Hay Boys 2K Quotes</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navigationbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li>{{#linkTo route="home"}}<i class="fa fa-home"></i>   Home{{/linkTo}}</li>
+          {{#if currentUser}}
+            <li>{{#linkTo route="quotesList"}}<i class="fa fa-align-justify"></i> Quotes{{/linkTo}}</li>
+            <li>{{#linkTo route="insertQuote"}}<i class="fa fa-plus"></i> New Quote{{/linkTo}}</li>
+          {{/if}}
+          <li><div class="nav navbar-nav navbar-right"> {{> atForm}}</div></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    {{> yield}}
+  </div>
+
+
+  <nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+      <ul class="nav navbar-nav navbar-right">
+        <li>Built with <i>love</i> - Kocsen</li>
+      </ul>
+    </div>
+  </nav>
+</template>
