@@ -23,5 +23,5 @@ aldeed:delete-button
 momentjs:moment
 natestrauser:font-awesome
 accounts-password
-semantic:ui
-useraccounts:semantic-ui
+ian:accounts-ui-bootstrap-3
+twbs:bootstrap

@@ -16,8 +16,8 @@ Router.onBeforeAction(function() {
 
 
 Router.route('/', {
-  name: 'home',
-  controller: 'HomeController',
+  name: 'quotesList',
+  controller: 'QuotesListController',
   where: 'client'
 });
 
@@ -27,11 +27,6 @@ Router.route('insert_quote', {
   where: 'client'
 });
 
-Router.route('quotes_list', {
-  name: 'quotesList',
-  controller: 'QuotesListController',
-  where: 'client'
-});
 
 Router.route('/quotes/id', {
   name: 'quotesId',
